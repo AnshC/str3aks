@@ -13,6 +13,13 @@
   src: url('../src/font/regular.otf');
 }
 
+:root {
+  --dark: #060A07;
+  --primary: #55F680;
+  --secondary: #30FFCE;
+  --text: #D7FEE1;
+}
+
 html,
 body {
   padding: 0;

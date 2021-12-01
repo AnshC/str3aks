@@ -33,3 +33,7 @@
 .navbar ul li a .icon {
     margin-right: 10px;
 }
+
+.button:hover {
+    transform: scale(1.1);
+}

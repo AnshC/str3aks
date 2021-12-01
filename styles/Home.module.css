@@ -46,6 +46,15 @@
     padding: 0px 0px 0px 15vw;
 }
 
+.hero .buttons {
+    display: flex;
+}
+
 .hero .button {
-    margin: 10px 10px 10px 10px;
+    margin: 20px 20px 10px 0px;
+    transition: transform 0.2s ;
+}
+
+.hero .button:hover {
+    transform: scale(1.1);
 }
