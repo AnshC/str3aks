@@ -27,8 +27,11 @@ export default function Home() {
               your streaks. Anytime, anywhere.
             </p>
             <div className={styles.buttons}>
-              <Button width="150px" color="#55F680" textColor="#060A07">
+              <Button to="/auth/signup" className={styles.button} width="150px" color="#55F680" textColor="#060A07">
                 Start Now.
+              </Button>
+              <Button to="/auth/signin" className={styles.button} width="150px" color="#30FFCE" textColor="#060A07">
+                Sign In.
               </Button>
             </div>
           </div>
