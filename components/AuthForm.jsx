@@ -19,9 +19,9 @@ export default function AuthForm(props) {
                 <p>{props.alt}</p>
                 <div className={styles.values}>
                     <label htmlFor="email">Email</label>
-                    <input sx={{ backgroundColor: "bg", color: "text" }} type="text" id="email" placeholder="example@mail.com"/>
+                    <input sx={{ backgroundColor: "bgTransparent", color: "text" }} type="text" id="email" placeholder="example@mail.com"/>
                     <label htmlFor="password">Password</label>
-                    <input sx={{ backgroundColor: "bg", color: "text" }} type="password" id="password" placeholder="Something secret."/>
+                    <input sx={{ backgroundColor: "bgTransparent", color: "text" }} type="password" id="password" placeholder="Something secret."/>
                 </div>
                 <button onClick={((e)=>{formSubmit(e)})}><FaFire className={styles.icon} />{props.button}</button>
             </form>

@@ -6,11 +6,13 @@ import { FiSettings } from "react-icons/fi";
 import { MdDarkMode } from "react-icons/md";
 import { FaSignOutAlt } from "react-icons/fa";
 import { BsPlusLg } from "react-icons/bs"
+import Gradient from "../components/Gradient";
 export default function Dashboard() {
   const router = useRouter();
   const { user } = router.query;
   return (
     <div sx={{ backgroundColor: "bg" }} className={styles.main}>
+      <Gradient />
       <H2 SX={{ color: "primary" }}>{user}</H2>
       <ul className={styles.settings}>
         <li>

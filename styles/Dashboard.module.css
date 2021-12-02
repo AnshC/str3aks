@@ -4,6 +4,12 @@
     display: flex;
     padding: 150px 15vw 0px 15vw;
     flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.main * {
+    z-index: 5;
 }
 
 .main .settings {
