@@ -17,30 +17,6 @@
     font-size: 30px;
 }
 
-.hero .gradient_green {
-    bottom: 0;
-    right: 0;
-    opacity: 0.1;
-    width: 1300px;
-    height: 1300px;
-    position: absolute;
-    background-image: radial-gradient(#55F680, rgba(0,0,0,0) , rgba(0,0,0,0));
-    background-size: contain;
-    transform: translateX(500px) scale(1.1);
-}
-
-.hero .gradient_blue {
-    bottom: 0;
-    left: 0;
-    opacity: 0.05;
-    width: 1300px;
-    height: 1300px;
-    position: absolute;
-    background-image: radial-gradient(#00FFFF, rgba(0,0,0,0) , rgba(0,0,0,0));
-    background-size: contain;
-    transform: translateX(-500px) translateY(500px) scale(1.1);
-}
-
 .hero .content {
     z-index: 2;
     padding: 0px 0px 0px 15vw;
