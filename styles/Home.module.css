@@ -24,6 +24,7 @@
 
 .hero .buttons {
     display: flex;
+    align-items: center;
 }
 
 .hero .button {
@@ -32,5 +33,10 @@
 }
 
 .hero .button:hover {
-    transform: scale(1.1);
+    transform: scale(1.04);
+}
+
+.hero .button .icon {
+    font-size: 20px;
+    margin-right: 5px;
 }

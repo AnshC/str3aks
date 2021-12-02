@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import { H1 } from '../components/Headings'
 import Button from '../components/Buttons'
 import Gradient from '../components/Gradient'
+import { FaFire, FaSignInAlt } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -26,11 +27,11 @@ export default function Home() {
               your streaks. Anytime, anywhere.
             </p>
             <div className={styles.buttons}>
-              <Button to="/auth/signup" className={styles.button} width="150px" color="#55F680" textColor="#060A07">
-                Start Now.
+              <Button to="/auth/signup" className={styles.button} width="160px" color="#55F680" textColor="#060A07">
+                <FaFire className={styles.icon}/>Start Now.
               </Button>
-              <Button to="/auth/signin" className={styles.button} width="150px" color="#30FFCE" textColor="#060A07">
-                Sign In.
+              <Button to="/auth/signin" className={styles.button} width="160px" color="#30FFCE" textColor="#060A07">
+                <FaSignInAlt className={styles.icon} />Sign In.
               </Button>
             </div>
           </div>
