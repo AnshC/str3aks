@@ -6,7 +6,7 @@ import Button from '../components/Buttons'
 import Gradient from '../components/Gradient'
 import { FaFire, FaSignInAlt } from 'react-icons/fa'
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
@@ -39,4 +39,17 @@ export default function Home() {
       </div>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  const data = await fetch('http://localhost:3000/api/auth/session')
+    .then(res => res.json())
+    .then((data) => {
+      return data
+    })
+    return {
+      props: {
+        data
+      }
+    }
 }
