@@ -2,13 +2,28 @@
 import styles from '../styles/Components.module.css'
 import { H2 } from './Headings'
 import { FaFire } from 'react-icons/fa'
+import { handleSignUp } from '../functions/auth';
+import { useState } from 'react';
+import { useRouter } from 'next/router'
+
 export default function AuthForm(props) {
+
+    const router = useRouter()
+
+    const [ userPassword, setUserPassword ] = useState("")
+    const [ userEmail, setUserEmail ] = useState("")
+    
     function formSubmit (e) {
         e.preventDefault();
         if (props.fn === "signin") {
             console.log("sign in")
         } else if (props.fn === "signup") {
             console.log("sign up")
+            handleSignUp(userEmail, userPassword).then(data =>{
+                if ( data !== null) {
+                    router.push('/auth/username')
+                }
+            })
         }
     }
     return (
@@ -19,9 +34,21 @@ export default function AuthForm(props) {
                 <p>{props.alt}</p>
                 <div className={styles.values}>
                     <label htmlFor="email">Email</label>
-                    <input sx={{ backgroundColor: "bgTransparent", color: "text" }} type="text" id="email" placeholder="example@mail.com"/>
+                    <input 
+                        sx={{ backgroundColor: "bgTransparent", color: "text" }} 
+                        type="text" 
+                        id="email" 
+                        placeholder="example@mail.com"
+                        onInput={((e)=>{setUserEmail(e.target.value)})}
+                    />
                     <label htmlFor="password">Password</label>
-                    <input sx={{ backgroundColor: "bgTransparent", color: "text" }} type="password" id="password" placeholder="Something secret."/>
+                    <input 
+                        sx={{ backgroundColor: "bgTransparent", color: "text" }} 
+                        type="password" 
+                        id="password" 
+                        placeholder="Something secret." 
+                        onInput={((e)=>{setUserPassword(e.target.value)})}
+                    />
                 </div>
                 <button onClick={((e)=>{formSubmit(e)})}><FaFire className={styles.icon} />{props.button}</button>
             </form>
