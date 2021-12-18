@@ -27,10 +27,10 @@ export default function Home(props) {
               your streaks. Anytime, anywhere.
             </p>
             <div className={styles.buttons}>
-              <Button to="/auth/signup" className={styles.button} width="160px" color="#55F680" textColor="#060A07">
+              <Button to="/auth/signup" className={styles.button} width="160px" textColor="#060A07">
                 <FaFire className={styles.icon}/>Start Now.
               </Button>
-              <Button to="/auth/signin" className={styles.button} width="160px" color="#30FFCE" textColor="#060A07">
+              <Button to="/auth/signin" className={styles.button} width="160px" textColor="#060A07">
                 <FaSignInAlt className={styles.icon} />Sign In.
               </Button>
             </div>
@@ -41,8 +41,8 @@ export default function Home(props) {
   )
 }
 
-export async function getStaticProps(context) {
-  const data = await fetch('http://localhost:3000/api/auth/session')
+/* export async function getStaticProps(context) {
+  const data = await fetch('')
     .then(res => res.json())
     .then((data) => {
       return data
@@ -52,4 +52,4 @@ export async function getStaticProps(context) {
         data
       }
     }
-}
+} */
