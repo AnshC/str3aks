@@ -29,11 +29,23 @@
 
 .hero .button {
     margin: 20px 20px 10px 0px;
-    transition: transform 0.2s ;
+    transition: background 0.2s ;
 }
 
-.hero .button:hover {
-    transform: scale(1.04);
+.hero .button:nth-child(1) {
+    background-color: var(--primary);
+}
+
+.hero .button:nth-child(2) {
+    background-color: var(--secondary);
+}
+
+.hero .button:nth-child(1):hover {
+    background-color: var(--primary-dark);
+}
+
+.hero .button:nth-child(2):hover {
+    background-color: var(--secondary-dark);
 }
 
 .hero .button .icon {
